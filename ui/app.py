@@ -37,12 +37,12 @@ outer_left, center_container, outer_right = st.columns([1,2,1])
 
 with center_container:
     with st.container(border=True):
-        column1, spacer, column2 = st.columns([10,2,10], gap="xxlarge", vertical_alignment='center')
+        column1, spacer, column2 = st.columns([10,2,10], gap="medium", vertical_alignment='center')
         with column1:
             min_date=datetime.date.today()-datetime.timedelta(days=365*150)
             date_of_birth=st.date_input("Date of Birth", min_value=min_date, max_value=datetime.date.today(), format="DD/MM/YYYY")
-            height=st.number_input("Height",min_value=100.0, max_value=250.0, value=170.0, step=0.5)
-            systolic_blood_pressure=st.number_input("Systolic Blood Pressure", min_value=70, max_value=250, value=120, step=1)
+            height=st.number_input("Height (cm)",min_value=100.0, max_value=250.0, value=170.0, step=0.5)
+            systolic_blood_pressure=st.number_input("Systolic Blood Pressure (mm of Hg)", min_value=70, max_value=250, value=120, step=1)
             cholesterol=st.selectbox(
                 "Cholesterol",
                 options=['Normal','Above normal','Well above normal'],
@@ -64,8 +64,8 @@ with center_container:
                 options=["Male","Female"],
                 horizontal=True
             )
-            weight=st.number_input("Weight", min_value=30.0, max_value=300.0, value=60.0, step=0.5)
-            diastolic_blood_pressure=st.number_input("Diastolic Blood Pressure", min_value=40, max_value=150, value=80, step=1)
+            weight=st.number_input("Weight (kg)", min_value=30.0, max_value=300.0, value=60.0, step=0.5)
+            diastolic_blood_pressure=st.number_input("Diastolic Blood Pressure (mm of Hg)", min_value=40, max_value=150, value=80, step=1)
             glucose=st.selectbox(
                 "Glucose",
                 options=['Normal','Above normal','Well above normal'],
