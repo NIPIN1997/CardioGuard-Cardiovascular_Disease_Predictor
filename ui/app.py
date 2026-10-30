@@ -127,3 +127,9 @@ with center_container:
                 else:
                     st.success(f"**Prediction:** Low risk of cardiovascular disease.")
                     st.success(f"**Confidence:** {prediction_probability[0] * 100:.2f}%")
+    st.warning(
+        "⚠️ **Medical Disclaimer** CardioGuard is powered by machine learning "
+        "for informational and educational purposes only. It does not provide "
+        "formal medical diagnoses. **Always consult a qualified healthcare provider** "
+        "for any medical advice, diagnosis or treatment."
+    )
