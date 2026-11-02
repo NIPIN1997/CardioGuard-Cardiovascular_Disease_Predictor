@@ -5,7 +5,7 @@ import pandas as pd
 import os
 
 st.set_page_config(
-    page_title="CardioGuard 🩺",
+    page_title="CardioGuard 💗",
     layout="wide",
 
 )
@@ -13,7 +13,7 @@ st.set_page_config(
 @st.cache_resource
 def load_assets():
     current_dir=os.path.dirname((os.path.abspath(__file__)))
-    model_path=os.path.join(current_dir,'..','model','lgbm_model.pkl')
+    model_path=os.path.join(current_dir,'..','model','model.pkl')
     scaler_path=os.path.join(current_dir,'..','model','standard_scaler.pkl')
     model=joblib.load(model_path)
     scaler=joblib.load(scaler_path)
