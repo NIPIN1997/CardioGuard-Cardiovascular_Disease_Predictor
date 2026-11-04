@@ -42,8 +42,3 @@ The trained model and scaler was saved.
 
 ## User Interface
 A user interface for this application was created using streamlit.
-
-## Deployment
-The app has been deployed using Streamlit Community Cloud.
-
-url - https://cardioguard-cardiovasculardiseasepredictor-gy7gycg8ykkabhgwjwu.streamlit.app/
