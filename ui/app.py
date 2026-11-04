@@ -15,6 +15,12 @@ def load_assets():
     current_dir=os.path.dirname((os.path.abspath(__file__)))
     model_path=os.path.join(current_dir,'..','model','model.pkl')
     scaler_path=os.path.join(current_dir,'..','model','standard_scaler.pkl')
+    if not os.path.exists(model_path):
+        st.error(f"Model file not found at {model_path}")
+        st.stop()
+    if not os.path.exists(scaler_path):
+        st.error(f"Scaler file not found at {scaler_path}")
+        st.stop()
     model=joblib.load(model_path)
     scaler=joblib.load(scaler_path)
     return model, scaler
