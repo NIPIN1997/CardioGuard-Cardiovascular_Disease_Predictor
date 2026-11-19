@@ -42,3 +42,14 @@ The trained model and scaler was saved.
 
 ## User Interface
 A user interface for this application was created using streamlit.
+
+## Docker Deployment
+The project is containerized using a root DockerFile that packages both the Streamlit interface and the serialized model/scaler artifacts.
+### Build the image
+```bash
+docker build -t cardioguard .
+```
+### Run the container
+```bash
+docker run -d --name cardioguard -p 8501:8501 cardioguard
+```
